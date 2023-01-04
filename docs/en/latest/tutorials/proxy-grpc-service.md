@@ -168,7 +168,7 @@ yages                       ClusterIP   10.96.37.236   <none>        9000/TCP   
 ```bash
 kubectl run -it -n ingress-apisix --rm grpcurl --restart=Never --image=quay.io/mhausenblas/gump:0.1 -- sh
 If you don't see a command prompt, try pressing enter.
-/go $ grpcurl --insecure -servername grpc-proxy apisix-gateway:443 yages.Echo.Ping
+/go $ grpcurl --insecure -authority grpc-proxy apisix-gateway:443 yages.Echo.Ping
 {
   "text": "pong"
 }
